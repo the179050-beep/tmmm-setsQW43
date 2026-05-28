@@ -1,0 +1,55 @@
+modules = ["nodejs-20", "web"]
+[agent]
+expertMode = true
+
+[nix]
+channel = "stable-25_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Next.js Dev Server"
+
+[[workflows.workflow]]
+name = "Next.js Dev Server"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
+waitForPort = 5000
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 23636
+externalPort = 3001
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["npm", "run", "start"]
+build = ["npm", "run", "build"]
+
+[userenv]
+
+[userenv.shared]
+NEXT_PUBLIC_FIREBASE_API_KEY = "AIzaSyBcuvUORWL2xASyo-FKmpdTMFnNzJ1SQak"
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN = "tsssg-19d8f.firebaseapp.com"
+NEXT_PUBLIC_FIREBASE_PROJECT_ID = "tsssg-19d8f"
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET = "tsssg-19d8f.firebasestorage.app"
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID = "780790250547"
+NEXT_PUBLIC_FIREBASE_APP_ID = "1:780790250547:web:29aef5ac34442592d37746"
+NEXT_PUBLIC_FIREBASE_DATABASE_URL = "https://tsssg-19d8f-default-rtdb.firebaseio.com"
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID = "G-LRDL3KTCQM"
