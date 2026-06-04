@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FullPageLoader } from "@/components/loader";
+import { ChatPanel } from "@/components/chat-panel";
 import {
   ShieldCheck,
   Clock,
@@ -123,7 +124,6 @@ export default function LandingPage() {
   return (
     <div className="min-h-screen bg-white" dir="rtl">
       {navigating && <FullPageLoader />}
-
       <header className="sticky top-0 z-40 bg-white/70 backdrop-blur-2xl border-b border-gray-100/60">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
