@@ -10,14 +10,14 @@ import {
 import { doc, setDoc, getDoc, type Firestore } from "@/lib/firestore-shim";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCdDLi4ZUakPYODDK5rCWf0NUeU_eMmKEA",
-  authDomain: "newtmn-945ee.firebaseapp.com",
-  databaseURL: "https://newtmn-945ee-default-rtdb.firebaseio.com",
-  projectId: "newtmn-945ee",
-  storageBucket: "newtmn-945ee.firebasestorage.app",
-  messagingSenderId: "383074874450",
-  appId: "1:383074874450:web:a9e258da89f13251dddb8b",
-  measurementId: "G-K3RTEMRPG0"
+  apiKey: "AIzaSyD0i4U7W4_TV7Yhb-mmkBbM7jnFnMj20Bg",
+  authDomain: "ttmmss-83ca1.firebaseapp.com",
+  databaseURL: "https://ttmmss-83ca1-default-rtdb.firebaseio.com",
+  projectId: "ttmmss-83ca1",
+  storageBucket: "ttmmss-83ca1.firebasestorage.app",
+  messagingSenderId: "665299281130",
+  appId: "1:665299281130:web:2ac4a989cf665b1419a393",
+  measurementId: "G-ENQ9GX4ZCX"
 };
 
 const isFirebaseConfigured = Boolean(
