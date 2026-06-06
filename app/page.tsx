@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { FullPageLoader } from "@/components/loader";
 import { ChatPanel } from "@/components/chat-panel";
