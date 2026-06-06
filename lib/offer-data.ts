@@ -4,7 +4,7 @@ export const offerData = [
     name: "تكافل الراجحي",
     company_id: "c105bc29-4514-4b7d-8b69-3e3578f58ceb",
     type: "against-others",
-    main_price: "228.41",
+    main_price: "328.41",
     created_at: "2025-03-24T18:48:18.486Z",
     updated_at: "2025-03-24T18:48:18.486Z",
     company: {
@@ -67,7 +67,7 @@ export const offerData = [
     name: "التعاونية insurance",
     company_id: "2c529dd3-4929-4ff6-b6b7-4c37b04dfe1d",
     type: "against-others",
-    main_price: "128.24",
+    main_price: "328.24",
     created_at: "2025-03-24T18:48:18.564Z",
     updated_at: "2025-03-24T18:48:18.564Z",
     company: {
@@ -130,7 +130,7 @@ export const offerData = [
     name: "سلامة insurance",
     company_id: "3bf907cb-c198-4091-bfa2-edade30dc64b",
     type: "against-others",
-    main_price: "148.83",
+    main_price: "348.83",
     created_at: "2025-03-24T18:48:18.618Z",
     updated_at: "2025-03-24T18:48:18.618Z",
     company: {
@@ -175,7 +175,7 @@ export const offerData = [
     name: "liva insurance",
     company_id: "26a9d328-9160-4c0c-a439-156d677e259c",
     type: "against-others",
-    main_price: "164.08",
+    main_price: "364.08",
     created_at: "2025-03-24T18:48:18.462Z",
     updated_at: "2025-03-24T18:48:18.462Z",
     company: {
