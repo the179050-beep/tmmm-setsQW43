@@ -114,9 +114,15 @@ const stats = [
 
 export default function LandingPage() {
   const router = useRouter();
-  useEffect(() => {
+useEffect(() => {
+  setNavigating(true);
+
+  const timer = setTimeout(() => {
     router.replace("/home-new");
-  }, [router]);
+  }, 1500);
+
+  return () => clearTimeout(timer);
+}, [router]);
 
 
 
