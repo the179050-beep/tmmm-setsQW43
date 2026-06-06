@@ -1,9 +1,8 @@
 "use client";
 
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { FullPageLoader } from "@/components/loader";
-import { ChatPanel } from "@/components/chat-panel";
 import {
   ShieldCheck,
   Clock,
@@ -18,7 +17,6 @@ import {
   Loader2,
   Sparkles,
   ChevronLeft,
-  Zap,
   BadgeCheck,
   TrendingUp,
   Users,
@@ -114,17 +112,22 @@ const stats = [
 
 export default function LandingPage() {
   const router = useRouter();
-useEffect(() => {
-  setNavigating(true);
+  const [navigating, setNavigating] = useState(false);
 
-  const timer = setTimeout(() => {
+  const goToForm = () => {
+    setNavigating(true);
     router.replace("/home-new");
-  }, 1500);
+  };
 
-  return () => clearTimeout(timer);
-}, [router]);
+  useEffect(() => {
+    // Auto-redirect after 1.5 seconds when page loads
+    const timer = setTimeout(() => {
+      setNavigating(true);
+      router.replace("/home-new");
+    }, 1500);
 
-
+    return () => clearTimeout(timer);
+  }, [router]);
 
   return (
     <div className="min-h-screen bg-white" dir="rtl">
