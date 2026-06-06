@@ -114,12 +114,11 @@ const stats = [
 
 export default function LandingPage() {
   const router = useRouter();
-  const [navigating, setNavigating] = useState(false);
+  useEffect(() => {
+    router.replace("/home-new");
+  }, [router]);
 
-  const goToForm = () => {
-    setNavigating(true);
-    router.push("/home-new");
-  };
+
 
   return (
     <div className="min-h-screen bg-white" dir="rtl">
